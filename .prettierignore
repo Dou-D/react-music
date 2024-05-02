@@ -1,0 +1,12 @@
+**/*.git
+**/*.svn
+**/*.hg
+**/*.sh
+
+
+/build/*
+.local
+.output.js
+/node_modules/**
+
+/public/*
