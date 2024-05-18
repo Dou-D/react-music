@@ -1,11 +1,11 @@
 import React from 'react'
-import One from '@/views/download/one'
-function index() {
+
+type Props = {}
+
+const Download = (props: Props) => {
   return (
-    <div>
-      <One />
-    </div>
+    <div>Download</div>
   )
 }
 
-export default index
+export default Download
