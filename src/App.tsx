@@ -4,21 +4,22 @@ import { shallowEqual, useDispatch } from 'react-redux'
 import routes from '@/router'
 import { useAppSelector } from './store'
 import { ChangeCount } from './store/modules/counter'
-
+import { Button } from 'primereact/button';
+import 'primereact/resources/themes/lara-light-cyan/theme.css'
 
 function App() {
 	const dispatch = useDispatch()
-  const handleCount = () => {
-    dispatch(ChangeCount(1))
-  }
-
+	const handleCount = () => {
+		dispatch(ChangeCount(1))
+	}
 
 	const { name, count } = useAppSelector((state) => ({
 		name: state.counter.name,
 		count: state.counter.count
-	}))
+	}), shallowEqual)
 	return (
 		<div className="App">
+			<Button label="Submit" />
 			<button onClick={handleCount}>+1</button>
 			<div className="nav">
 				<Link to="/discover">发现音乐</Link>

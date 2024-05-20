@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './modules/counter'
+import userReducer from '@/store/modules/user'
 import { useSelector, useDispatch, TypedUseSelectorHook } from 'react-redux'
 const store = configureStore({
 	reducer: {
-		counter: counterReducer
+		counter: counterReducer,
+		user: userReducer
 	}
 })
 
